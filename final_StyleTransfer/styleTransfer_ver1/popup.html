@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <title>Choose Style Base</title>
+    <head>
+        <style type="text/css">
+            h2 {
+                font-family: "HelveticaNeue";
+                font-size: 20px;
+                
+            } 
+            
+            .btn {
+                color: black;
+                padding: 10px;
+                font-size: 16px;
+                cursor: pointer;
+                z-index: 11;
+                border: 1px solid #ffffff;
+                background-color:rgba(255, 255, 255, 0);
+                width: 310px;
+            }
+            .btn:hover, .dropbtn:focus {
+                color: #000000;
+                background-color: #fccc0a;
+            }
+
+            #base, #done, canvas{
+                display: none;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h2>1. Choose ONE image</h2>
+        <h2>2. Choose ONE Style</h2>
+
+        <div>
+            <input id="scream" class="style" type="image" width="100" height="100">
+            <input id="udnie" class="style" type="image" width="100" height="100">
+            <input id="wave" class="style" type="image" width="100" height="100">
+        </div>
+        <button id="submit" class="btn" name="submit">Enter</button>
+        <div id="base">
+            <h2>3. Base Image</h2>
+            <img id="input" width=300 height=300 alt="no image" src="">
+            <button id="transfer" class="btn" name="transfer">Transfer</button>
+        </div>
+        
+        <div id="done">
+            <h2>4. Output Image</h2>
+            <a href="" id="output" width=300 height=300 alt="no image" download="output.jpg">
+                <img id="transferred" src="">
+            </a>
+        </div>
+        <canvas id="tmp" width=640 height=640></canvas>
+        <script src="ml5.min.js"></script>
+        <script src="forpopup.js"></script>
+    </body>
+</html>
